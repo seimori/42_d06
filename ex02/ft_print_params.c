@@ -6,7 +6,7 @@
 /*   By: imorimot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/12 22:30:13 by imorimot          #+#    #+#             */
-/*   Updated: 2018/07/12 22:34:47 by imorimot         ###   ########.fr       */
+/*   Updated: 2018/07/12 22:59:52 by imorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,14 @@ void	ft_putstr(char *str)
 
 int		main(int argc, char **argv)
 {
-	(void)argc;
-	ft_putstr(argv[1]);
-	ft_putchar('\n');
-	ft_putstr(argv[2]);
-	ft_putchar('\n');
-	ft_putstr(argv[3]);
-	ft_putchar('\n');
+	int		i;
+
+	i = 1;
+	while (i < argc)
+	{
+		ft_putstr(argv[i]);
+		ft_putchar('\n');
+		i++;
+	}
 	return (0);
 }
